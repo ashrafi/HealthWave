@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
+<!-- above set at the top of the file will set     -->
+<!-- the browser's rendering engine into           -->
+<!-- "Quirks Mode". Replacing this declaration     -->
+<!-- with a "Standards Mode" doctype is supported, -->
+<!-- but may lead to some differences in layout.   -->
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <!--                                                               -->
+    <!-- Consider inlining CSS to reduce the number of requested files -->
+    <!--                                                               -->
+    <link type="text/css" rel="stylesheet" href="HealthWave.css">
+
+    <!--                                           -->
+    <!-- Any title is fine                         -->
+    <!--                                           -->
+    <title>Web Application Starter Project</title>
+    
+    <!--                                           -->
+    <!-- This script loads your compiled module.   -->
+    <!-- If you add any GWT meta tags, they must   -->
+    <!-- be added before this line.                -->
+    <!--                                           -->
+    <script type="text/javascript" language="javascript" src="healthwave/healthwave.nocache.js"></script>
+    
+    <!-- add wave embedded protocal -->
+    <!-- need to move this to the java code in GWT -->
+    
+    <script src="http://wave-api.appspot.com/public/embed.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    function initialize() {
+      var wavePanel = new WavePanel('http://wave.google.com/a/wavesandbox.com/');
+      wavePanel.loadWave('wavesandbox.com!w+omEaD7rj%A');
+      wavePanel.init(document.getElementById('waveframe'));
+    }
+    </script>
+    
+    
+  </head>
+
+  <!--                                           -->
+  <!-- The body can have arbitrary html, or      -->
+  <!-- you can leave the body empty if you want  -->
+  <!-- to create a completely dynamic UI.        -->
+  <!--                                           -->
+  <body onload="initialize()">
+
+    <!-- OPTIONAL: include this if you want history support -->
+    <iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1' style="position:absolute;width:0;height:0;border:0"></iframe>
+
+    <h1>Google Health Wave Demo</h1>
+    <div id="waveframe" style="width: 500px; height: 100%"></div>
+	<span align="center" id="main"></span>
+	
+    <table align="center">
+      <tr>
+        <td colspan="2" style="font-weight:bold;">Please enter patient name:</td>        
+      </tr>
+      <tr>
+      	
+        <td id="nameFieldContainer"></td>
+        <td id="sendButtonContainer"></td>
+      </tr>
+    </table>
+  </body>
+</html>
